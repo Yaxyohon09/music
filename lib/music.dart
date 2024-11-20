@@ -64,7 +64,7 @@ class NomPageState extends State<NomPage> {
       music: "SI Ai .mp3",
     ),
     A(
-      name: "Unknown",
+      name: "Нежно",
       photo: "image/rasm8.jpg",
       music: "speed.mp3",
     ),
@@ -235,7 +235,9 @@ class NomPageState extends State<NomPage> {
                   width: 280,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage(nom[currentIndex].photo!),
+                      image: AssetImage(
+                        nom[currentIndex].photo!,
+                      ),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -289,6 +291,7 @@ class NomPageState extends State<NomPage> {
                 ),
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   SizedBox(width: 30),
                   IconButton(
@@ -312,7 +315,7 @@ class NomPageState extends State<NomPage> {
                         backgroundColor: Colors.black,
                         child: Text(
                           '1',
-                          style: TextStyle(fontSize: 12, color: Colors.white),
+                          style: TextStyle(fontSize: 12, color: Colors.white,),
                         ),
                       ),
                     ),
@@ -357,6 +360,9 @@ class NomPageState extends State<NomPage> {
                       Icons.queue_music_outlined,
                       size: 45,
                     ),
+                  ),
+                  SizedBox(
+                    width: 20,
                   ),
                 ],
               ),
